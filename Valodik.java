@@ -2,17 +2,16 @@ import java.util.*;
 import java.io.*;
 public class Valodik{
 	public static void main(String[] args)throws Throwable{
-
 		ArrayList<Integer> arrList = new ArrayList<>();
 		while(arrList.size()!=21){
 			int j = (int) (Math.random()* 30 + 1);
 			if(!arrList.contains(j)){
-				arrList.add(j);
+				arrList.add(j); // Добавление рандомных элементов в массив
 			}
 		}
 
 		while(true){
-			game(arrList);
+			game(arrList); //Начало игры
 			System.out.println("Сыграем еще разок? Y - yes");
 			Scanner sc = new Scanner(System.in);
 			String answer = sc.nextLine().toLowerCase();
@@ -45,7 +44,7 @@ public class Valodik{
 			}
 			int n = testAnswer();
 			list.clear();
-			if(n==1){
+			if(n==1){ 
 				list = newList(arr3, arr1, arr2);
 			}else if(n==2){
 				list = newList(arr1, arr2, arr3);
@@ -71,7 +70,7 @@ public class Valodik{
 		System.out.println("\n" + list.get(10));
 	}
 
-	private static ArrayList newList(int[] a1, int[] a2, int[] a3){
+	private static ArrayList newList(int[] a1, int[] a2, int[] a3){ //Вот тут начинается магия!
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
 		for(int i=0; i<a1.length; i++){
