@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 public class Valodik{
 	public static void main(String[] args)throws Throwable{
+		while(true){
 		ArrayList<Integer> arrList = new ArrayList<>();
 		while(arrList.size()!=21){
 			int j = (int) (Math.random()* 30 + 1);
@@ -9,8 +10,6 @@ public class Valodik{
 				arrList.add(j); // Добавление рандомных элементов в массив
 			}
 		}
-
-		while(true){
 			game(arrList); //Начало игры
 			System.out.println("Сыграем еще разок? Y - yes");
 			Scanner sc = new Scanner(System.in);
